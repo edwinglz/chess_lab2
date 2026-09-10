@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class lab2{
 
-    //gets a char and returns an int limited to A-H to 1-8
+    //gets a char and returns an int limited to A-H to 1-8 ///
     public static int turnCharToInt(char x){
         int xcoord;
 
