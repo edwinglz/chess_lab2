@@ -17,29 +17,11 @@ public class Pawn{
         this.column = column;
         this.row = row;
     }
+    
+    public String getColor() { return color; }
+    public char getColumn() { return column; }
+    public int getRow() { return row; }
+    
+    public void setColumn(char column) { this.column = Character.toLowerCase(column); }
+    public void setRow(int row) { this.row = row; }
 
-    //getters
-
-    public String getColor(){
-        return this.color;
-    }
-
-    public int getColumn(){
-        return this.column;
-    }
-
-    public int getRow(){
-        return this.row;
-    }
-
-    //setters
-
-    public void setColumn(int column){
-        this.column = column;
-    }
-
-    public void setRow(int row){
-        this.row = row;
-    }
-
-}
