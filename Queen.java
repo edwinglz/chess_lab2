@@ -2,16 +2,14 @@ public class Queen{
         //properties
     private String piece_name;
     private String color;
-    private int column;
+    private char column;
     private int row;
 
     //constructors
-
     public Queen(){
 
     }
-
-    public Queen(String piece_name,String color,int column,int row){
+    public Queen(String piece_name,String color,char column,int row){
         this.piece_name = piece_name;
         this.color = color;
         this.column = column;
@@ -19,51 +17,42 @@ public class Queen{
     }
 
     //getters
-
     public String getColor(){
         return this.color;
     }
-
     public int getColumn(){
         return this.column;
     }
-
     public int getRow(){
         return this.row;
     }
 
     //setters
-
-    public void setColumn(int column){
+    public void setColumn(char column){
         this.column = column;
     }
-
     public void setRow(int row){
         this.row = row;
     }
 
 
     //validation
+    public boolean isValidQueen(char column, int row){
+        char targetCol = Character.toLowerCase(column);
+        char currentCol = Character.toLowerCase(this.column);
 
-    
-    public boolean isValidQueen(int column, int row){
+        if(targetCol == currentCol && row == this.row){
+            return false;
+        }
         
         //rook verification
-        if(this.column != column && row == this.row){
-            return true;
-        }
-
-        if(this.row != row && column == this.column){
-            return true;
-        }
+        boolean isRookMove = (targetCol == currentCol && row != this.row) || //or
+                             (row == this.row && targetCol != currentCol);
 
         //Bishop verification
+        boolean isBishopMove = Math.abs(targetCol - currentCol) == Math.abs(row - this.row);
 
-        if(Math.abs(column - this.column) == Math.abs(row - this.row) && (this.column != column)){
-            return true;
-
-        }
-
-        return false;
+        //Queen movement rule is combo of Rook and Bishop
+        return isBishopMove||isRookMove;
     }
 }
