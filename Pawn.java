@@ -30,7 +30,7 @@ public class Pawn{
 
     //setters
     public void setColumn(char column) { 
-        this.column = Character.toLowerCase(column); 
+        this.column = column; 
     }
     public void setRow(int row) { 
         this.row = row; 
