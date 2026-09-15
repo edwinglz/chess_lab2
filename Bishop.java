@@ -36,7 +36,7 @@ public class Bishop{
     }
 
     //validation
-    public boolean isValid(char column, int row){
+    public boolean verifyTarget(char column, int row){
         char targetCol = Character.toLowerCase(column);
         char currentCol = Character.toLowerCase(this.column);
 
