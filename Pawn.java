@@ -37,7 +37,7 @@ public class Pawn{
     }
 
     // Pawn movement validation
-    public boolean verifyTarget(char targetCol, int targetRow) {
+    public boolean isValid(char targetCol, int targetRow) {
         char targetColLower = Character.toLowerCase(targetCol);
         char currentColLower = Character.toLowerCase(this.column);
 
