@@ -30,14 +30,14 @@ public class Pawn{
 
     //setters
     public void setColumn(char column) { 
-        this.column = column; 
+        this.column = Character.toLowerCase(column); 
     }
     public void setRow(int row) { 
         this.row = row; 
     }
 
     // Pawn movement validation
-    public boolean isValid(char targetCol, int targetRow) {
+    public boolean verifyTarget(char targetCol, int targetRow) {
         char targetColLower = Character.toLowerCase(targetCol);
         char currentColLower = Character.toLowerCase(this.column);
 
@@ -51,14 +51,20 @@ public class Pawn{
             if (targetRow == this.row + 1) {
                 return true;
             }
-        
+            // Optional: standard chess allows 2 squares forward from row 2
+            if (this.row == 2 && targetRow == this.row + 2) {
+                return true;
+            }
         }
         // Black moves DOWN (-1 row, or -2 rows from starting row 7)
         else if (this.color.equalsIgnoreCase("BLACK")) {
             if (targetRow == this.row - 1) {
                 return true;
             }
-           
+            // Optional: standard chess allows 2 squares forward from row 7
+            if (this.row == 7 && targetRow == this.row - 2) {
+                return true;
+            }
         }
 
         return false;

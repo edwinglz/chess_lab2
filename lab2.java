@@ -31,9 +31,6 @@ import java.util.Scanner;
     KNIGHT,
     PAWN
   }
-  enum LocationX {
-    a, b, c, d, e, f, g, h
-  }
 
 public class lab2{
   public enum PieceType {
@@ -49,7 +46,6 @@ public class lab2{
         System.out.print("\nEnter choice: ");
         
       
-        Scanner scanner = new Scanner(System.in);
     
         //MAIN MENU, SELECTING THE PIECE AND THE POSITIONS
         System.out.println("Welcome! If you are here this means you are trying to verify a chess piece's movement.");
@@ -303,7 +299,6 @@ public class lab2{
         }
           case PAWN:{
             Pawn piece = new Pawn("Pawn",chosenColor, startingColumn, startingRow);
-            boolean isValidMove = piece.verifyTarget(targetColumn, targetRow);
             System.out.println(isValidMove ? "Valid move!" : "Invalid move!");
             break;
           }
