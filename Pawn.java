@@ -2,7 +2,7 @@ public class Pawn{
         //properties
     private String piece_name;
     private String color;
-    private int column;
+    private char column;
     private int row;
 
     //constructors
@@ -11,20 +11,30 @@ public class Pawn{
 
     }
 
-    public Pawn(String piece_name,String color,int column,int row){
+    public Pawn(String piece_name,String color,char column,int row){
         this.piece_name = piece_name;
         this.color = color;
         this.column = column;
         this.row = row;
     }
     //getters    
-    public String getColor() { return color; }
-    public char getColumn() { return column; }
-    public int getRow() { return row; }
+    public String getColor() {
+        return color; 
+    }
+    public char getColumn() { 
+        return column; 
+    }
+    public int getRow() { 
+        return row;
+    }
 
     //setters
-    public void setColumn(char column) { this.column = Character.toLowerCase(column); }
-    public void setRow(int row) { this.row = row; }
+    public void setColumn(char column) { 
+        this.column = Character.toLowerCase(column); 
+    }
+    public void setRow(int row) { 
+        this.row = row; 
+    }
 
     // Pawn movement validation
     public boolean verifyTarget(char targetCol, int targetRow) {
@@ -59,3 +69,4 @@ public class Pawn{
 
         return false;
     }
+}
