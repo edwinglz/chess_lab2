@@ -182,6 +182,8 @@ public class lab2{
           }
         }
 
+
+        //MISSING SWITCH CASE FOR PIECETYPE TO SEND MOVE VALIDATION METHOD
         
       }
     }
