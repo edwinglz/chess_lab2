@@ -37,7 +37,7 @@ public class Queen{
 
 
     //validation
-    public boolean isValidQueen(char column, int row){
+    public boolean isValid(char column, int row){
         char targetCol = Character.toLowerCase(column);
         char currentCol = Character.toLowerCase(this.column);
 
