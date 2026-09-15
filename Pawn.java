@@ -51,20 +51,14 @@ public class Pawn{
             if (targetRow == this.row + 1) {
                 return true;
             }
-            // Optional: standard chess allows 2 squares forward from row 2
-            if (this.row == 2 && targetRow == this.row + 2) {
-                return true;
-            }
+        
         }
         // Black moves DOWN (-1 row, or -2 rows from starting row 7)
         else if (this.color.equalsIgnoreCase("BLACK")) {
             if (targetRow == this.row - 1) {
                 return true;
             }
-            // Optional: standard chess allows 2 squares forward from row 7
-            if (this.row == 7 && targetRow == this.row - 2) {
-                return true;
-            }
+           
         }
 
         return false;
