@@ -303,7 +303,7 @@ public class lab2{
         }
           case PAWN:{
             Pawn piece = new Pawn("Pawn",chosenColor, startingColumn, startingRow);
-            boolean isValidMove = piece.verifyTarget(targetColumn, targetRow);
+            boolean isValidMove = piece.isValid(targetColumn, targetRow);
             System.out.println(isValidMove ? "Valid move!" : "Invalid move!");
             break;
           }
